@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+#import "CalculatorBrain.h"
+
 @interface CalculatorViewController : UIViewController
 {
-    
+    CalculatorBrain * brain;
+    IBOutlet UILabel * display;
 }
+
+- (IBAction)digitPressed:(UIButton *)sender;
+- (IBAction)operationPressed:(UIButton *)sender;
 
 @end
