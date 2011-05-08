@@ -14,6 +14,7 @@
 {
     CalculatorBrain * brain;
     IBOutlet UILabel * display;
+    BOOL userIsInTheMiddleOfTypingANumber;
 }
 
 - (IBAction)digitPressed:(UIButton *)sender;
