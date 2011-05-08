@@ -16,9 +16,31 @@
     operand = anOperand; 
 }
 
+- (void)performWaitingOperation
+{
+    if ([waitingOperation isEqual:@"+"]) {
+        operand = waitingOperand + operand;
+    } else if ([waitingOperation isEqual:@"-"]) {
+        operand = waitingOperand - operand;
+    } else if ([waitingOperation isEqual:@"*"]) {
+        operand = waitingOperand * operand;
+    } else if ([waitingOperation isEqual:@"/"]) {
+        if (operand) {
+            operand = waitingOperand / operand;
+        }
+    }
+}
+
 - (double)performOperation:(NSString *)operation
 {
-    return 0;
+    if ([operation isEqual:@"sqrt"]) {
+        operand = sqrt(operand);
+    } else {
+        [self performWaitingOperation];
+        waitingOperation = operation;
+        waitingOperand = operand;
+    }
+    return operand;
 }
 
 @end
