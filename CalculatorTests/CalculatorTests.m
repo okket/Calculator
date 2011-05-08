@@ -3,7 +3,7 @@
 //  CalculatorTests
 //
 //  Created by Okke Timm on 08.05.11.
-//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//  Copyright 2011 Okke Timm. All rights reserved.
 //
 
 #import "CalculatorTests.h"
