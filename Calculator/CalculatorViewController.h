@@ -17,6 +17,10 @@
     BOOL userIsInTheMiddleOfTypingANumber;
 }
 
+@property (nonatomic, readonly) CalculatorBrain *brain;
+@property (nonatomic, retain) IBOutlet UILabel *display;
+@property (nonatomic, readonly) BOOL userIsInTheMiddleOfTypingANumber;
+
 - (IBAction)digitPressed:(UIButton *)sender;
 - (IBAction)operationPressed:(UIButton *)sender;
 

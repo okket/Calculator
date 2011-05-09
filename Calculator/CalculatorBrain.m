@@ -8,13 +8,11 @@
 
 #import "CalculatorBrain.h"
 
-
 @implementation CalculatorBrain
 
-- (void)setOperand:(double)anOperand
-{
-    operand = anOperand; 
-}
+@synthesize operand;
+@synthesize waitingOperation;
+@synthesize waitingOperand;
 
 - (void)performWaitingOperation
 {
