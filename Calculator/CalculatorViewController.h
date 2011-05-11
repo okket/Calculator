@@ -12,14 +12,14 @@
 
 @interface CalculatorViewController : UIViewController
 {
-    CalculatorBrain * brain;
-    IBOutlet UILabel * display;
+    CalculatorBrain *brain;
+    IBOutlet UILabel *display;
     BOOL userIsInTheMiddleOfTypingANumber;
 }
 
-@property (nonatomic, readonly) CalculatorBrain *brain;
+@property (nonatomic, retain) CalculatorBrain *brain;
 @property (nonatomic, retain) IBOutlet UILabel *display;
-@property (nonatomic, readonly) BOOL userIsInTheMiddleOfTypingANumber;
+@property (readonly) BOOL userIsInTheMiddleOfTypingANumber;
 
 - (IBAction)digitPressed:(UIButton *)sender;
 - (IBAction)operationPressed:(UIButton *)sender;

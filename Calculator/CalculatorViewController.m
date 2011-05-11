@@ -10,11 +10,14 @@
 
 @implementation CalculatorViewController
 
+@synthesize brain;
 @synthesize display;
 @synthesize userIsInTheMiddleOfTypingANumber;
 
 - (void)dealloc
 {
+    [brain release];
+    [display release];
     [super dealloc];
 }
 
@@ -41,6 +44,8 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+    display = nil;
+    brain = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
